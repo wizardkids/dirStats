@@ -1,3 +1,4 @@
+.gitignore
 .history/
 .vscode/
 __pycache__/
@@ -6,6 +7,7 @@ scratch.py
 *.txt
 *.json
 *.ico
+*.orig
 *.png
 *.jpg
 *.zip
