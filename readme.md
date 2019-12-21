@@ -1,6 +1,6 @@
 # `dirStats`
 
-#GOAL:
+# GOAL:
 
 This program is currently in extremely early development.
 
