@@ -12,7 +12,15 @@ import os
 from glob import glob
 from pathlib import Path
 
-print()
+
+def formatted_directories(root_dir):
+    """
+    Given a path, generate a formatted list of folder and subfolders.
+
+    Arguments:
+        root_dir {str} -- a valid path
+    """
+
 
 root_dir = 'c:\\users\\rer1\\OneDrive\\Python on OneDrive\\Jupyter Projects\\Tutorials_jupyter\\PANDAS'
 
@@ -43,3 +51,8 @@ for i in range(num_dirs):
         print(Path(common_folder))
     else:
         print(ndent, directory)
+
+
+if __name__ == '__main__':
+
+    formatted_directories('')
