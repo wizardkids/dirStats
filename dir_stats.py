@@ -12,6 +12,8 @@ import os
 from glob import glob
 from pathlib import Path
 
+import win32com.client as com
+
 
 def formatted_directories(root_dir):
     """
@@ -22,7 +24,29 @@ def formatted_directories(root_dir):
     """
 
 
-root_dir = 'c:\\users\\rer1\\OneDrive\\Python on OneDrive\\Jupyter Projects\\Tutorials_jupyter\\PANDAS'
+root_dir = 'C:\\temp'
+os.chdir(root_dir)
+
+# does not appear to be recursive
+obj = os.scandir()
+# List all files and diretories
+# in the specified path
+print("Files and Directories in '% s':" % root_dir)
+for entry in obj:
+    # if entry.is_dir() or entry.is_file():
+    print(entry.name)
+    print(entry.stat(follow_symlinks=True).st_size)
+
+print('\n')
+# The following won't work on some folders
+# due to lack of permission
+fso = com.Dispatch("Scripting.FileSystemObject")
+folder = fso.GetFolder(root_dir)
+print(folder.size, 'bytes')
+print(folder.size / 1024, 'KB')
+print(folder.size / 1024 / 1024, 'MB')
+
+exit()
 
 # get the name of the root dir, the one folder that is common
 # to rest of the folders
@@ -54,5 +78,5 @@ for i in range(num_dirs):
 
 
 if __name__ == '__main__':
-
-    formatted_directories('')
+    pass
+    # formatted_directories('')
