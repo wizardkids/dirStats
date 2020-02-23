@@ -22,6 +22,7 @@ def formatted_directories(root_dir):
     Arguments:
         root_dir {str} -- a valid path
     """
+    pass
 
 
 root_dir = 'c:\\users\\rer1\\OneDrive\\Python on OneDrive\\Jupyter Projects\\Tutorials_jupyter\\PANDAS'
