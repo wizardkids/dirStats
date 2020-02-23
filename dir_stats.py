@@ -22,6 +22,7 @@ def formatted_directories(root_dir):
     Arguments:
         root_dir {str} -- a valid path
     """
+    pass
 
 
 root_dir = 'C:\\temp'
